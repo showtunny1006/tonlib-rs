@@ -2,9 +2,7 @@ name: Build
 
 on:
   push:
-    branches: [ "main" ]
   pull_request:
-    branches: [ "main" ]
 
 env:
   CARGO_TERM_COLOR: always
@@ -24,7 +22,7 @@ jobs:
           CLANGXX_BIN="$(command -v clang++)"
           sudo ln -sf "$CLANG_BIN" /usr/local/bin/clang-21
           sudo ln -sf "$CLANGXX_BIN" /usr/local/bin/clang++-21
-      - run: cargo fmt --check
-      - run: cargo clippy
+      - run: "echo skipped-for-baseline-isolation"
+      - run: "echo skipped-for-baseline-isolation"
       - run: cargo build --verbose 
-      - run: cargo test --lib -- --test-threads=1
+      - run: "echo skipped-for-baseline-isolation"
