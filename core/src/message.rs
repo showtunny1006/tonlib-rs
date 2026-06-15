@@ -67,7 +67,7 @@ impl TonMessage for Cell {
 }
 
 pub trait WithForwardPayload: TonMessage {
-    fn with_forward_payload(
+    with_forward_payload(
         &mut self,
         forward_ton_amount: BigUint,
         forward_payload: ArcCell,
